@@ -18,6 +18,7 @@ There are two things you can do about this warning:
 
 ;;;; init-loader
 (require 'init-loader)
+(setq init-loader-show-log-after-init t)
 (init-loader-load "~/.emacs.d/inits")
 
 (custom-set-variables
