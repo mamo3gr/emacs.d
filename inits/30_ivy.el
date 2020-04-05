@@ -19,6 +19,14 @@
   ([remap yank-pop] . counsel-yank-pop)
   ([remap find-file] . counsel-find-file))
 
+(use-package ivy-posframe
+  :disabled t
+  :config
+  (ivy-posframe-mode 1)
+  :custom
+  (ivy-display-function-alist '((t . ivy-posframe-display)))
+  )
+
 (use-package all-the-icons-ivy-rich
   :after ivy
   :config
