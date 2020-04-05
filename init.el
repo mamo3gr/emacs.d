@@ -16,24 +16,17 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
+;;;; use-package
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 ;;;; init-loader
 (require 'init-loader)
 (setq inits-dir (expand-file-name "~/.emacs.d/inits/"))
 (setq init-loader-show-log-after-init t)
 (init-loader-load inits-dir)
 
-;;;; use-package
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (ample-theme git-gutter magit recentf-mode company dockerfile-mode markdown-mode counsel rainbow-delimiters use-package auto-highlight-symbol anzu mozc init-loader))))
-    (undo-tree ample-theme git-gutter magit recentf-mode company dockerfile-mode markdown-mode counsel rainbow-delimiters use-package auto-highlight-symbol anzu mozc init-loader)))
+;; custom variables is separated from here
+(setq custom-file (locate-user-emacs-file "custom.el"))
 
 (server-start)
