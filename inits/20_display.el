@@ -13,10 +13,9 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (setq default-frame-alist
-      (append (list
-               '((font . "Cica-16")
-                 (width . 95)
-                 (height . 50)))
+      (append '((font . "Cica-16")
+                (width . 95)
+                (height . 50))
               default-frame-alist))
 
 ;; buffer
