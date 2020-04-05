@@ -23,6 +23,7 @@ There are two things you can do about this warning:
 (init-loader-load inits-dir)
 
 ;;;; use-package
+(require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
 (custom-set-variables
