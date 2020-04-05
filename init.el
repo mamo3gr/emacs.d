@@ -34,5 +34,6 @@ There are two things you can do about this warning:
  '(package-selected-packages
    (quote
     (ample-theme git-gutter magit recentf-mode company dockerfile-mode markdown-mode counsel rainbow-delimiters use-package auto-highlight-symbol anzu mozc init-loader))))
+    (undo-tree ample-theme git-gutter magit recentf-mode company dockerfile-mode markdown-mode counsel rainbow-delimiters use-package auto-highlight-symbol anzu mozc init-loader)))
 
 (server-start)
