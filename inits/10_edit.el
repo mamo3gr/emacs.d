@@ -13,6 +13,11 @@
 ;; no backup
 (setq make-backup-files nil)
 
+;; set indent in html-mode
+(use-package sgml-mode
+  :custom
+  (sgml-basic-offset 4))
+
 ;;;; Wrapper of comment-dwim
 ;; Reference: http://www.opensubscriber.com/message/emacs-devel@gnu.org/10971693.html
 (defun comment-dwim-line (&optional arg)
