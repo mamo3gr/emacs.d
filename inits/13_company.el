@@ -5,11 +5,6 @@
   (completion-ignore-case t)
   (company-idle-delay 0)
   (company-minimum-prefix-length 2)
-  (company-backends '((company-files
-                       company-keywords
-                       company-capf
-                       company-yasnippet)
-                      (company-abbrev company-dabbrev)))
   :bind
   (:map company-active-map
         ("C-n" . company-select-next)
