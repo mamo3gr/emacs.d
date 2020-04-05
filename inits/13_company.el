@@ -1,6 +1,5 @@
 ;;;; company
 (use-package company
-  :ensure t
   :hook (prog-mode . company-mode)
   :custom
   (completion-ignore-case t)

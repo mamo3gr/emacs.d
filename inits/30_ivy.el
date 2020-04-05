@@ -1,6 +1,5 @@
 ;;;; ivy/counsel
 (use-package ivy
-  :ensure t
   :config
   (ivy-mode 1)
   :bind
@@ -10,7 +9,6 @@
   (ivy-count-format "(%d/%d) "))
 
 (use-package counsel
-  :ensure t
   :config
   ;; remaps built-in emacs functions that have counsel replacements
   (counsel-mode 1)

@@ -1,11 +1,9 @@
 ;;;; magit
 (use-package magit
-  :ensure t
   :bind
   ("C-c m" . magit))
 
 (use-package git-gutter
-  :ensure t
   :custom
   (git-gutter:modified-sign "~")
   (git-gutter:added-sign    "+")

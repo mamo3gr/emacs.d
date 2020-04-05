@@ -6,8 +6,7 @@
                (load-theme 'ample-flat t t)
                (load-theme 'ample-light t t)
                (enable-theme 'ample-flat))
-  :defer t
-  :ensure t)
+  :defer t)
 
 ;; frame
 (menu-bar-mode 0)

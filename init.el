@@ -22,6 +22,9 @@ There are two things you can do about this warning:
 (setq init-loader-show-log-after-init t)
 (init-loader-load inits-dir)
 
+;;;; use-package
+(setq use-package-always-ensure t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
