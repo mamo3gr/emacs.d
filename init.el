@@ -29,4 +29,7 @@ There are two things you can do about this warning:
 ;; custom variables is separated from here
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
-(server-start)
+;; start server
+(use-package server
+  :ensure nil
+  :hook (after-init . server-mode))
