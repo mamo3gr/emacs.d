@@ -18,6 +18,10 @@
   :custom
   (sgml-basic-offset 4))
 
+;;;; smartparens
+(use-package smartparens
+  :hook (prog-mode . smartparens-mode))
+
 ;;;; Wrapper of comment-dwim
 ;; Reference: http://www.opensubscriber.com/message/emacs-devel@gnu.org/10971693.html
 (defun comment-dwim-line (&optional arg)
