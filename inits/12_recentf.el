@@ -1,6 +1,6 @@
 ;;;; recentf
 (use-package recentf
-  :config
+  :init
   (recentf-mode 1)
   :custom
   (recentf-max-saved-items 1000)
