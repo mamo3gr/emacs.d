@@ -52,13 +52,13 @@
 (setq uniquify-min-dir-content 2)
 
 ;;;; line-numbers
-(if (version<= "26.0.50" emacs-version)
-    (progn
-      (global-display-line-numbers-mode)
-      (set-face-attribute 'line-number nil
-                          :inherit font-lock-comment-face)
-      (set-face-attribute 'line-number-current-line nil
-                          :inherit font-lock-keyword-face)))
+(use-package display-line-numbers
+  :ensure nil
+  :hook
+  (after-init . global-display-line-numbers-mode)
+  :custom-face
+  (line-number ((nil (:inherit font-lock-comment-face))))
+  (line-number-current-line ((nil (:inherit font-lock-keyword-face)))))
 
 ;;;; rainbow-delimiters
 (use-package rainbow-delimiters
