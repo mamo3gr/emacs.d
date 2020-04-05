@@ -4,6 +4,7 @@
   ("C-c m" . magit))
 
 (use-package git-gutter
+  :diminish
   :custom
   (git-gutter:modified-sign "~")
   (git-gutter:added-sign    "+")

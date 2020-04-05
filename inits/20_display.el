@@ -62,12 +62,14 @@
 
 ;;;; rainbow-delimiters
 (use-package rainbow-delimiters
+  :diminish
   :hook
   (prog-mode . rainbow-delimiters-mode))
 
 (use-package whitespace
   :config
   (global-whitespace-mode 1)
+  :diminish global-whitespace-mode
   :custom
   (whitespace-style '(face
                       trailing

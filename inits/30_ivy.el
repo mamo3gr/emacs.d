@@ -2,6 +2,7 @@
 (use-package ivy
   :config
   (ivy-mode 1)
+  :diminish
   :bind
   ("M-o" . swiper)
   ("C-c C-r" . ivy-resume)
@@ -12,6 +13,7 @@
   :config
   ;; remaps built-in emacs functions that have counsel replacements
   (counsel-mode 1)
+  :diminish
   :bind
   ([remap recentf-open-files] . counsel-recentf)
   ([remap yank-pop] . counsel-yank-pop)
