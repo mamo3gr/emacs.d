@@ -6,6 +6,7 @@
   (company-dabbrev-downcase nil)  ;; do not downcase the returned candidates
   (company-idle-delay 0)
   (company-minimum-prefix-length 2)
+  (company-selection-wrap-around t)
   :bind
   (:map company-active-map
         ("C-n" . company-select-next)
