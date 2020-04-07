@@ -43,6 +43,7 @@
 
 ;;;; paren
 (use-package paren
+  :ensure nil
   :config
   (show-paren-mode 1)
   :custom
