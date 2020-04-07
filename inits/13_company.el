@@ -2,6 +2,7 @@
 (use-package company
   :diminish
   :hook (prog-mode . company-mode)
+  :diminish (company-mode "CO")
   :custom
   (completion-ignore-case t)
   (company-dabbrev-downcase nil)  ;; do not downcase the returned candidates
