@@ -2,11 +2,12 @@
 
 ;; theme
 (use-package ample-theme
-  :init (progn (load-theme 'ample t t)
-               (load-theme 'ample-flat t t)
-               (load-theme 'ample-light t t)
-               (enable-theme 'ample-flat))
-  :defer t)
+  :defer t
+  :init
+  (load-theme 'ample t t)
+  (load-theme 'ample-flat t t)
+  (load-theme 'ample-light t t)
+  (enable-theme 'ample-flat)
 
 ;; frame
 (menu-bar-mode 0)
