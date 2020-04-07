@@ -79,4 +79,7 @@
                       trailing
                       tabs
                       empty
-                      tab-mark)))
+                      tab-mark))
+  :custom-face
+  (whitespace-trailing ((nil (:background "#BC8F8F"))))
+  (whitespace-empty ((nil (:background "#334433")))))
