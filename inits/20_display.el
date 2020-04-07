@@ -9,7 +9,7 @@
   (load-theme 'ample-light t t)
   (enable-theme 'ample-flat)
   :custom-face
-  (region ((nil (:background "#44040")))))
+  (region ((nil (:background "#440404")))))
 
 ;; frame
 (menu-bar-mode 0)
