@@ -15,9 +15,7 @@
   ;; invoke counsel-mode to remaps built-ins to counsel counterparts
   (ivy-mode . counsel-mode)
   :bind
-  ([remap recentf-open-files] . counsel-recentf)
-  ([remap yank-pop] . counsel-yank-pop)
-  ([remap find-file] . counsel-find-file))
+  ([remap recentf-open-files] . counsel-recentf))
 
 (use-package ivy-posframe
   :disabled t
