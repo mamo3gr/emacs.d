@@ -48,3 +48,12 @@ text by that amount."
           (setq indent (- indent (prefix-numeric-value pad))))
         (indent-rigidly (point-min) (point-max) (- indent))
         (copy-region-as-kill (point-min) (point-max))))))
+
+;; switch to previous buffer
+;;   Ref: https://emacsredux.com/blog/2013/04/28/switch-to-previous-buffer/
+(defun er-switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+(define-key global-map (kbd "C-x C-b") 'er-switch-to-previous-buffer)
