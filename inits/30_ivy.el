@@ -26,13 +26,11 @@
   )
 
 (use-package all-the-icons-ivy-rich
-  :after ivy
-  :config
-  (all-the-icons-ivy-rich-mode 1)
+  :hook
+  (ivy-mode . all-the-icons-ivy-rich-mode)
   :custom
   (all-the-icons-ivy-rich-icon-size 0.7))
 
 (use-package ivy-rich
-  :after ivy
-  :config
-  (ivy-rich-mode 1))
+  :hook
+  (ivy-mode . ivy-rich-mode))
