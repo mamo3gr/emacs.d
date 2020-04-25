@@ -20,7 +20,7 @@
 
 ;;;; smartparens
 (use-package smartparens
-  :diminish
+  :diminish (smartparens-mode "SP")
   :hook (prog-mode . smartparens-mode))
 
 ;;;; Wrapper of comment-dwim
