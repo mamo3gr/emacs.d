@@ -11,12 +11,43 @@
   :custom-face
   (region ((nil (:background "#440404")))))
 
+;; font
+;
+; reference:
+;   Emacs on OS Xのフォント設定 - Qiita
+;   https://qiita.com/gooichi/items/03789492eec26607e11b
+;
+; in order to list available fonts, execute:
+;   (dolist (font-family (font-family-list)) (print font-family))
+(let* ((font-family "Cica")
+       (font-size 14)
+       (font-height (* font-size 14))
+       (jp-font-family "Cica"))
+  (set-face-attribute 'default nil :family font-family :height font-height)
+  (let ((name (frame-parameter nil 'font))
+        (jp-font-spec (font-spec :family jp-font-family))
+        (jp-characters '(katakana-jisx0201
+                         cp932-2-byte
+                         japanese-jisx0212
+                         japanese-jisx0213-2
+                         japanese-jisx0213.2004-1))
+        (font-spec (font-spec :family font-family))
+        (characters '((?\u00A0 . ?\u00FF)    ; Latin-1
+                      (?\u0100 . ?\u017F)    ; Latin Extended-A
+                      (?\u0180 . ?\u024F)    ; Latin Extended-B
+                      (?\u0250 . ?\u02AF)    ; IPA Extensions
+                      (?\u0370 . ?\u03FF)))) ; Greek and Coptic
+    (dolist (jp-character jp-characters)
+      (set-fontset-font name jp-character jp-font-spec))
+    (dolist (character characters)
+      (set-fontset-font name character font-spec))
+    (add-to-list 'face-font-rescale-alist (cons jp-font-family 1.0))))
+
 ;; frame
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (setq default-frame-alist
-      (append '((font . "Cica-20")
-                (width . 110)
+      (append '((width . 110)
                 (height . 50))
               default-frame-alist))
 
