@@ -15,8 +15,8 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (setq default-frame-alist
-      (append '((font . "Cica-16")
-                (width . 95)
+      (append '((font . "Cica-20")
+                (width . 110)
                 (height . 50))
               default-frame-alist))
 
