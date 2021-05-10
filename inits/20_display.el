@@ -20,8 +20,8 @@
 ; in order to list available fonts, execute:
 ;   (dolist (font-family (font-family-list)) (print font-family))
 (let* ((font-family "Cica")
-       (font-size 14)
-       (font-height (* font-size 14))
+       (font-size 12)
+       (font-height (* font-size 12))
        (jp-font-family "Cica"))
   (set-face-attribute 'default nil :family font-family :height font-height)
   (let ((name (frame-parameter nil 'font))
