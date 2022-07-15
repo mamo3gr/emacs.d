@@ -21,8 +21,11 @@
   :config
   (ivy-posframe-mode 1)
   :custom
-  (ivy-display-function-alist '((t . ivy-posframe-display)))
-  )
+  (ivy-display-function-alist
+   '((swiper          . ivy-posframe-display-at-point)
+     (complete-symbol . ivy-posframe-display-at-point)
+     (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+     (t               . ivy-posframe-display))))
 
 (use-package all-the-icons-ivy-rich
   :hook
