@@ -18,6 +18,7 @@
   ([remap recentf-open-files] . counsel-recentf))
 
 (use-package ivy-posframe
+  :diminish
   :config
   (ivy-posframe-mode 1)
   :custom
