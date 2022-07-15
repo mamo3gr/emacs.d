@@ -33,3 +33,6 @@ There are two things you can do about this warning:
 (use-package server
   :ensure nil
   :hook (after-init . server-mode))
+
+;; diminish
+(use-package diminish)
