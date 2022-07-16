@@ -37,3 +37,7 @@
 (use-package ivy-rich
   :hook
   (ivy-mode . ivy-rich-mode))
+
+(use-package amx
+  :hook
+  (after-init . amx-mode))
