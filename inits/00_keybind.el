@@ -8,7 +8,7 @@
 (define-key isearch-mode-map (kbd "C-\\") 'isearch-edit-string)
 
 ;; kill current buffer (skip confirmation)
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(define-key (current-global-map) (kbd "C-x k") 'kill-this-buffer)
 
-(global-set-key (kbd "M-i") 'indent-region)
-(global-set-key (kbd "M-g") 'goto-line)
+(define-key (current-global-map) (kbd "M-i") 'indent-region)
+(define-key (current-global-map) (kbd "M-g") 'goto-line)
