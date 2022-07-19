@@ -5,7 +5,7 @@
   :diminish (company-mode "CO")
   :custom
   (completion-ignore-case t)
-  (company-dabbrev-downcase nil)  ;; do not downcase the returned candidates
+  (company-dabbrev-downcase nil "do not downcase the returned candidates")
   (company-idle-delay 0)
   (company-minimum-prefix-length 2)
   (company-selection-wrap-around t)
