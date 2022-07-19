@@ -1,7 +1,7 @@
 ;;;; recentf
 (use-package recentf
-  :init
-  (recentf-mode 1)
+  :hook
+  (after-init . recentf-mode)
   :custom
   (recentf-max-saved-items 1000)
   (recentf-auto-save-timer (run-with-idle-timer 60 t 'recentf-save-list))
