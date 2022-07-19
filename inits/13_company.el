@@ -1,6 +1,5 @@
 ;;;; company
 (use-package company
-  :diminish
   :hook (prog-mode . company-mode)
   :diminish (company-mode "CO")
   :custom
