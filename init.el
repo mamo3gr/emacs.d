@@ -17,8 +17,10 @@ There are two things you can do about this warning:
 (package-initialize)
 
 ;;;; use-package
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
+(eval-when-compile
+  (setq use-package-enable-imenu-support t)
+  (setq use-package-always-ensure t)
+  (require 'use-package))
 
 ;;;; init-loader
 (require 'init-loader)
