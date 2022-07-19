@@ -1,5 +1,6 @@
 ;;;; undo-tree
 (use-package undo-tree
+  :diminish
   :config
   (global-undo-tree-mode 1)
   :custom
