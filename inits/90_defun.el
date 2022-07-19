@@ -87,6 +87,4 @@ This checks in turn:
           ;; now let it operate fully -- i.e. also check the
           ;; surrounding sexp for a function call.
           ((setq sym (function-at-point)) (describe-function sym)))))
-(define-key emacs-lisp-mode-map [(f1)] 'describe-foo-at-point)
-(define-key emacs-lisp-mode-map [(control f1)] 'describe-function)
-(define-key emacs-lisp-mode-map [(shift f1)] 'describe-variable)
+(define-key emacs-lisp-mode-map (kbd "<f1> p") 'describe-foo-at-point)
