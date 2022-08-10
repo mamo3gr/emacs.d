@@ -7,8 +7,7 @@
                          "show dashboard in frames created with `emacsclient -c`")
   (dashboard-startup-banner "~/.emacs.d/dashboard-startup-banner.txt")
   (dashboard-center-content t)
-  (dashboard-items '((agenda . 10)
-                     (recents . 20)))
+  (dashboard-items '((recents . 30)))
   (dashboard-footer-icon (all-the-icons-fileicon "emacs"
                                                  :height 0.8
                                                  :v-adjust -0.1
