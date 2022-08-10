@@ -23,7 +23,7 @@
    '(("PROJECT" . ?p) ("MEMO" . ?m) ("PETIT" . ?t)))
   (org-capture-templates
    '(("t" "Task" entry (file+headline org-default-notes-file "inbox")
-      "** TASK %?\n   CREATED: %U\n")
+      "** TODO %?\n   CREATED: %U\n")
      ("i" "Idea" entry (file+headline org-default-notes-file "idea")
       "** %?\n   CREATED: %U\n")))
   (org-refile-targets '((org-agenda-files :maxlevel . 1)))
