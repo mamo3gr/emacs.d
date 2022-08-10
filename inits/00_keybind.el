@@ -18,3 +18,6 @@
 
 ;; bind C-x d to dired-jump (C-x C-j by default) instead of dired
 (define-key (current-global-map) (kbd "C-x d") 'dired-jump)
+
+;; use Command key as Meta key
+(setq mac-command-modifier 'meta)
