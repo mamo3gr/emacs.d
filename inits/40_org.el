@@ -45,7 +45,7 @@
    '((daily today require-timed)
      (0900 1200 1300 1800) "......" "----------------"))
   (org-columns-default-format
-   "%68ITEM(Task) %6Effort(Effort){:} %6CLOCKSUM(Clock){:}")
+   "%68ITEM(Task) %6Effort(Effort){:} %6CLOCKSUM_T(Clock){:}")
   :bind
   (("C-c a" . org-agenda)
    ("C-c c" . org-capture)
