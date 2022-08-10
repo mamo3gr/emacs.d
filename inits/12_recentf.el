@@ -7,3 +7,5 @@
   (recentf-auto-save-timer (run-with-idle-timer 60 t 'recentf-save-list))
   :bind
   ("C-x f" . recentf-open-files))
+
+(use-package recentf-ext)
