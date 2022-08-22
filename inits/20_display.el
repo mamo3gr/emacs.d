@@ -19,10 +19,10 @@
 ;
 ; in order to list available fonts, execute:
 ;   (dolist (font-family (font-family-list)) (print font-family))
-(let* ((font-family "Cica")
+(let* ((font-family "UDEV Gothic")
        (font-size 13)
        (font-height (* font-size 13))
-       (jp-font-family "Cica"))
+       (jp-font-family "UDEV Gothic"))
   (set-face-attribute 'default nil :family font-family :height font-height)
   (let ((name (frame-parameter nil 'font))
         (jp-font-spec (font-spec :family jp-font-family))
