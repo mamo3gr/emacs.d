@@ -30,6 +30,7 @@
   ;; clock
   (org-log-done 'time "add a time stamp to the task when it is done")
   (org-clock-clocked-in-display 'frame-title)
+  (org-clock-out-remove-zero-time-clocks t)
   ;; agenda
   (org-agenda-time-leading-zero t)
   (org-agenda-custom-commands
