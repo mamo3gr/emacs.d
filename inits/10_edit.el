@@ -37,4 +37,4 @@
       (comment-or-uncomment-region (line-beginning-position) (line-end-position))
     (comment-dwim arg)))
 (global-set-key (kbd "C-c ;") 'comment-dwim-line)
-(global-set-key (kbd "M-;") 'comment-dwim-line)
+(global-set-key (kbd "C-;") 'comment-dwim-line)
