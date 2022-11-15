@@ -38,3 +38,7 @@
     (comment-dwim arg)))
 (global-set-key (kbd "C-c ;") 'comment-dwim-line)
 (global-set-key (kbd "C-;") 'comment-dwim-line)
+
+;; default directory
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
