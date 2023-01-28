@@ -14,7 +14,7 @@
 (define-key (current-global-map) (kbd "C-x k") 'kill-this-buffer)
 
 (define-key (current-global-map) (kbd "M-i") 'indent-region)
-(define-key (current-global-map) (kbd "M-g") 'goto-line)
+;(define-key (current-global-map) (kbd "M-g") 'goto-line)
 
 ;; bind C-x d to dired-jump (C-x C-j by default) instead of dired
 (define-key (current-global-map) (kbd "C-x d") 'dired-jump)
