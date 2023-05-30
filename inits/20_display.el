@@ -46,29 +46,10 @@
 ;; frame
 (menu-bar-mode 0)
 (tool-bar-mode 0)
-
-;; Reference:
-;;   モニタディスプレイのサイズに合わせてEmacsのフレームサイズと位置を調整する
-;;   https://m13o.net/202006052311
-(defun adjust-pos-and-size-of-current-frame-to-center ()
-  (interactive)
-  (when (display-graphic-p)
-    (let* ((workarea (mapcar (lambda (attr)
-                               (cdddr (assoc 'workarea attr)))
-                             (display-monitor-attributes-list)))
-           (width (floor (* (seq-min (mapcar #'car workarea)) 0.8)))
-           (height (floor (* (seq-min (mapcar #'cadr workarea)) 0.9))))
-      (let* ((current-workarea (frame-monitor-workarea))
-             (current-frame (selected-frame))
-             (x 0)
-             (y 0))
-        (when (>= (nth 0 current-workarea) 0)
-          (setq x (- (+ (nth 0 current-workarea) (/ (nth 2 current-workarea) 2)) (/ width 2))))
-        (when (>= (nth 1 current-workarea) 0)
-          (setq y (+ (/ (- (nth 3 current-workarea) height) 2) (nth 1 current-workarea))))
-        (set-frame-position current-frame x y)
-        (set-frame-size current-frame width height t)))))
-(adjust-pos-and-size-of-current-frame-to-center)
+(setq default-frame-alist
+      (append '((width . 110)
+                (height . 50))
+              default-frame-alist))
 
 ;; buffer
 (setq inhibit-startup-message t)
