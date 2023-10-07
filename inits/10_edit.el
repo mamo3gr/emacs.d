@@ -42,3 +42,6 @@
 ;; default directory
 (setq default-directory "~/")
 (setq command-line-default-directory "~/")
+
+;; wgrep
+(use-package wgrep)
