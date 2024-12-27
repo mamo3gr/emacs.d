@@ -67,6 +67,11 @@
     (progn (delete-other-windows)
            (recenter-top-bottom)))
   (ad-activate 'org-agenda-switch-to)
+  :custom
+  (org-agenda-prefix-format '((agenda . " %i %-14:c%?-12t% s")
+                              (todo . " %i %-12:c")
+                              (tags . " %i %-12:c")
+                              (search . " %i %-12:c")))
   :bind
   (:map org-agenda-mode-map
    ("s" . org-agenda-schedule)
