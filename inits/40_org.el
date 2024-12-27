@@ -41,6 +41,8 @@
       ""
       ((org-agenda-span 1)))))
   (org-agenda-skip-scheduled-if-done t)
+  (org-agenda-skip-deadline-if-done t)
+  (org-agenda-skip-deadline-prewarning-if-scheduled t)
   (org-agenda-columns-add-appointments-to-effort-sum t)
   (org-agenda-time-grid
    '((daily today require-timed)
