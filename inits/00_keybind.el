@@ -5,19 +5,19 @@
 (keyboard-translate ?\C-h ?\C-?)
 
 ;; use F1 instead of C-h
-(define-key (current-global-map) (kbd "<f1>") 'help-command)
+(keymap-global-set "<f1>" 'help-command)
 
 ;; move to mini-buffer when isearch
-(define-key isearch-mode-map (kbd "C-\\") 'isearch-edit-string)
+(keymap-set isearch-mode-map "C-\\" 'isearch-edit-string)
 
 ;; kill current buffer (skip confirmation)
-(define-key (current-global-map) (kbd "C-x k") 'kill-this-buffer)
+(keymap-global-set "C-x k" 'kill-current-buffer)
 
-(define-key (current-global-map) (kbd "M-i") 'indent-region)
-;(define-key (current-global-map) (kbd "M-g") 'goto-line)
+(keymap-global-set "M-i" 'indent-region)
+;(keymap-set (current-global-map) (kbd "M-g") 'goto-line)
 
 ;; bind C-x d to dired-jump (C-x C-j by default) instead of dired
-(define-key (current-global-map) (kbd "C-x d") 'dired-jump)
+(keymap-global-set "C-x d" 'dired-jump)
 
 ;; for MacOS
 (setq mac-command-key-is-meta nil)
