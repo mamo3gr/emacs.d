@@ -11,7 +11,7 @@
 (keymap-set isearch-mode-map "C-\\" 'isearch-edit-string)
 
 ;; kill current buffer (skip confirmation)
-(keymap-global-set "C-x k" 'kill-this-buffer)
+(keymap-global-set "C-x k" 'kill-current-buffer)
 
 (keymap-global-set "M-i" 'indent-region)
 ;(keymap-set (current-global-map) (kbd "M-g") 'goto-line)
