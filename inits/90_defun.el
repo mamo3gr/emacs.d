@@ -13,7 +13,7 @@
         (pop-to-mark-command)
         (replace-string "\n" (concat "\n" indent))
         (widen)))))
-(define-key global-map (kbd "C-c y") 'yank-with-indent)
+(keymap-global-unset "C-c y" 'yank-with-indent)
 
 ;; Ref: https://emacs.stackexchange.com/questions/34966/copy-region-without-leading-indentation
 (defun my-copy-region-unindented (pad beginning end)
@@ -56,7 +56,7 @@ text by that amount."
 Repeated invocations toggle between the two most recently open buffers."
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
-(define-key global-map (kbd "C-x C-b") 'er-switch-to-previous-buffer)
+(keymap-global-set "C-x C-b" 'er-switch-to-previous-buffer)
 
 ;; Describe function/variable or function call
 ;; Reference:
@@ -87,4 +87,4 @@ This checks in turn:
           ;; now let it operate fully -- i.e. also check the
           ;; surrounding sexp for a function call.
           ((setq sym (function-at-point)) (describe-function sym)))))
-(define-key emacs-lisp-mode-map (kbd "<f1> p") 'describe-foo-at-point)
+(keymap-set emacs-lisp-mode-map "<f1> p" 'describe-foo-at-point)
