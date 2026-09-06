@@ -45,3 +45,7 @@
 
 ;; wgrep
 (use-package wgrep)
+
+;; auto-revert
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
