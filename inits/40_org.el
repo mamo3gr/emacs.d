@@ -46,7 +46,7 @@
   (org-agenda-columns-add-appointments-to-effort-sum t)
   (org-agenda-time-grid
    '((daily today require-timed)
-     (0900 1200 1300 1800) "......" "----------------"))
+     (1201 1259 1731) "......" "--------------------------------------------------"))
   (org-columns-default-format
    "%68ITEM(Task) %6Effort(Effort){:} %6CLOCKSUM_T(Clock){:}")
   (tab-width 8)
