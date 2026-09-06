@@ -76,5 +76,6 @@
   :bind
   (:map org-agenda-mode-map
    ("s" . org-agenda-schedule)
-   ("S" . org-save-all-org-buffers))
+   ("S" . org-save-all-org-buffers)
+   ("D" . (lambda () (interactive) (org-agenda-todo "DONE"))))
   )
